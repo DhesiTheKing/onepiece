@@ -1,0 +1,91 @@
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.644),rgba(0, 0, 0, 0.575),rgb(0, 0, 0));
+}
+.sky{
+    margin: 0;
+    display: flex;
+    top: 0;
+    height: 30vh;
+    width: auto;
+}
+.sky img{
+    margin-top: 30px;
+    margin-left: 70%;
+    overflow: hidden;
+    width: 150px;
+    height: 100px;
+    filter: drop-shadow(5px 5px 10px rgb(255, 175, 2));
+    animation-name: sunRotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    filter: grayscale(1);
+
+}
+.container{
+    height: 40vh;
+}
+.container button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.container img{
+    z-index: 2;
+    position: absolute;
+    filter: drop-shadow(-10px 30px 15px rgb(255, 255, 255));
+    height: 400px;
+    top: 28%;
+    left: 40%;
+    animation-name: luffy;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    &:nth-child(2){
+        filter: grayscale(1);
+        z-index: 1;
+        height: 40vh;
+        width: 70vw;
+        left: 15%;
+        top: 40%;
+        animation-name: oneLogo;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-direction: alternate-reverse;
+    }
+}
+
+.sea{
+    height: 30vh;
+    display: flex;
+    width: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.sea img{
+    z-index: 3;
+    width: 100%;
+    height: 30vh;
+    filter: drop-shadow(100px 100px 55px black);
+    margin-left: -3px;
+    overflow: hidden;
+    animation-name: seaShake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    filter: grayscale(1);
+}
+@keyframes seaShake{
+    from{transform: translateX(10px) translateY(20px);}
+}
+@keyframes sunRotate{
+    from{transform: rotate(360deg);}
+}
+@keyframes oneLogo{
+    to{transform: translateX(-1500px);}
+}
+@keyframes luffy{
+    from{transform: translateY(-200%);}
+}

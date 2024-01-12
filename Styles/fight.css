@@ -1,0 +1,85 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: linear-gradient(rgba(241, 241, 241, 0),rgba(19, 162, 219, 0.486),rgb(46, 183, 247));
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    display: grid;
+}
+footer img{
+    position: absolute;
+    width: 110vw;
+    bottom: -22px;
+    height: 17vh;
+    margin-left: -25px;
+    border: 10px solid rgb(83, 52, 32);
+    animation-name: shipshake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    &:nth-child(1){
+        position: absolute;
+        border: none;
+        height: 20vh;
+        bottom: 135px;   
+    }
+    &:nth-child(3){
+        width: auto;
+        height: 400px;
+        border: none;
+        left: 20px;
+    }
+    &:nth-child(4){
+        z-index: 2;
+        width: auto;
+        height: 200px;
+        border: none;
+        left: 1500px;
+        bottom: 50px;
+    }
+    &:nth-child(5){
+        width: auto;
+        height: 200px;
+        border: none;
+        left: 1450px;
+        bottom: 100px;
+    }
+    &:nth-child(6){
+        animation-name: cloudshake;
+        animation-duration: 2s;
+        border: none;
+        bottom: 250px;
+        z-index: -1;
+    }
+}
+header{
+    position: absolute;
+    display: flex;
+    top: -50px;
+    width: 100%;
+    overflow: hidden;
+    height: 30vh;
+}
+header img{
+    z-index: 5;
+    width: 600px;
+    height: 300px;
+    margin-top: -100px;
+    margin-left: -340px;
+    filter: drop-shadow(2px 10px 16px hsla(0deg, 0%, 0%, 0.5));
+    animation-name: cloudshake;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes cloudshake{
+    from{transform: translateX(10px) translateY(10px);}
+}
+@keyframes shipshake{
+    from{transform: translateX(-20px) translateY(30px) ;}
+}
